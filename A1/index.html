@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="flex justc alignitem">
+            <h1><img src="./images/h-logo.png" alt="hlogo"></h1>
+            <nav>
+                <ul class="flex">
+                    <li class="mainmenu"><a href="#">탑</a>
+                        <ul class="submenu">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu"><a href="#">아우터</a>
+                        <ul class="submenu">
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">머플러</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu"><a href="#">팬츠</a>
+                        <ul class="submenu">
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">긴바지</a></li>
+                            <li><a href="#">레깅스</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu"><a href="#">악세사리</a>
+                        <ul class="submenu">
+                            <li><a href="#">귀고리</a></li>
+                            <li><a href="#">목걸이</a></li>
+                            <li><a href="#">반지</a></li>
+                            <li><a href="#">팔찌</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="slide-container">
+            <div class="slidewrap">
+                <div class="slide">
+                    <img src="./images/slide1.jpg" alt="slide1">
+                    <h2>slide1</h2>
+                </div>
+                <div class="slide">
+                    <img src="./images/slide2.jpg" alt="slide2">
+                    <h2>slide2</h2>
+                </div>
+                <div class="slide">
+                    <img src="./images/slide3.jpg" alt="slide3">
+                    <h2>slide3</h2>
+                </div>
+            </div>
+        </div>
+        <div class="contents flex justc">
+            <div class="tablist">
+                <ul class="tabmenu flex">
+                    <li class="on"><a href="#notice">공지사항</a></li>
+                    <li><a href="#gallery">갤러리</a></li>
+                </ul>
+                <div class="tabs">
+                    <div class="notice tab " id="notice">
+                        <ul>
+                            <li><a href="#">선물하기 매니아를 찾아라 이벤트</a>
+                                <spann class="date">21.07.13</spann>
+                            </li>
+                            <li><a href="#">새 모델 이름 맞히기 이벤트</a>
+                                <spann class="date">21.07.13</spann>
+                            </li>
+                            <li><a href="#">갤럭시탭 미스틱네이비 런칭</a>
+                                <spann class="date">21.07.13</spann>
+                            </li>
+                            <li><a href="#">개인정보 수집 및 이용동의서 양식</a>
+                                <spann class="date">21.07.13</spann>
+                            </li>
+                            <li><a href="#">찐텐리뷰 라이브방송 이벤트 당첨자</a>
+                                <spann class="date">21.07.13</spann>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gallery tab on" id="gallery" >
+                        <ul class="flex">
+                            <li><a href="#">
+                                    <img src="./images/gallery.jpg" alt=""></a>
+                            </li>
+                            <li><a href="#">
+                                    <img src="./images/gallery2.jpg" alt=""></a>
+                            </li>
+                            <li><a href="#">
+                                    <img src="./images/gallery3.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="banner">
+                <figure>
+                    <img src="./images/banner.jpg" alt="">
+                    <figcaption>배너</figcaption>
+                </figure>
+            </div>
+            <div class="shortcut">
+                <figure><img src="./images/shortcut.jpg" alt="">
+                    <figcaption>바로가기</figcaption>
+                </figure>
+            </div>
+        </div>
+        <footer class="flex alignitem">
+            <div class="flogo">
+                <img src="./images/f-logo.png" alt=""></div>
+            <div class="copyright">
+                <p>서울특별시 동대문구 장안벚꽃로 279 한국산업인력공단<br /> 서울지역본부
+                    전화번호: 1644-8000 동대문구 휘경동 전동중학교 건너편.</p>
+            </div>
+            <ul class="sns flex">
+                <li><a href="#"><img src="./images/kakao.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/insta.png" alt=""></a></li>
+                <li><a href="#"><img src="./images/twitter.png" alt=""></a></li>
+            </ul>
+        </footer>
+    </div>
+    </div>
+    <div class="modalbox">
+        <div class="madal1">
+            <h3>회원가입 10% 쿠폰 및 생일 쿠폰 지급</h3>
+            <p>아다클럽 가입기념으로 제공되는 welcome 10% 할인 쿠폰은 회원가입시 [이메일 수신동의]</p>
+        </div>
+    </div>
+    <script src="./script/jquery-3.7.1.js"></script>
+    <script src="./script/index.js"></script>
+    <script>
+        $('.tabs li a').click(function(e){
+            e.preventDefault()
+            let href = $(this).attr('#notice')
+            $('.tabs').attr('#notice, #gallery')
+        })
+    </script>
+</body>
+
+</html>

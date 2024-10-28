@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>a1</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<div class="wrap">
+
+		<header class="flex justb aline">
+			<h1><a href="#"><img src="./images/h-logo.png" alt="logo"></a></h1>
+			<nav>
+				<ul class="flex justc aline">
+					<li class="main-menu">
+						<a href="#">탑</a>
+						<ul class="submenu">
+							<li><a href="#">블라우스</a></li>
+							<li><a href="#">티</a></li>
+							<li><a href="#">셔츠</a></li>
+							<li><a href="#">니트</a></li>
+						</ul>
+					</li>
+					<li class="main-menu">
+						<a href="#">아우터</a>
+						<ul class="submenu">
+							<li><a href="#">자켓</a></li>
+							<li><a href="#">코트</a></li>
+							<li><a href="#">가디건</a></li>
+							<li><a href="#">머플러</a></li>
+						</ul>
+					</li>
+					<li class="main-menu">
+						<a href="#">팬츠</a>
+						<ul class="submenu">
+							<li><a href="#">청바지</a></li>
+							<li><a href="#">짧은바지</a></li>
+							<li><a href="#">긴바지</a></li>
+							<li><a href="#">레깅스</a></li>
+						</ul>
+					</li>
+					<li class="main-menu">
+						<a href="#">악세서리</a>
+						<ul class="submenu">
+							<li><a href="#">귀고리</a></li>
+							<li><a href="#">목걸이</a></li>
+							<li><a href="#">반지</a></li>
+							<li><a href="#">팔찌</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="slide-container">
+			<div class="slide-wrap">
+				<div class="slide">
+					<img src="./images/slide1.jpg" alt="slide1">
+					<div class="summary">
+						<h3>slide1</h3>
+						<p>slide1 contents</p>
+					</div>
+				</div>
+				<div class="slide">
+					<img src="./images/slide2.jpg" alt="slide2">
+					<div class="summary">
+						<h3>slide2</h3>
+						<p>slide2 contents</p>
+					</div>
+				</div>
+				<div class="slide">
+					<img src="./images/slide3.jpg" alt="slide3">
+					<div class="summary">
+						<h3>slide3</h3>
+						<p>slide3 contents</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container flex justb aline">
+			<div class="tab-list">
+				<ul class="tabmenu flex aline">
+					<li class="on"><a href="#notice">공지사항</a></li>
+					<li><a href="#gallery">갤러리</a></li>
+				</ul>
+				<div class="tabs">
+					<div class="notice tab on" id="notice">
+						<ul class="">
+							<li class="modal"><a href="#">1. 이번달 고객감사 이벤트 진행중</a><span>24.10.28</span></li>
+							<li><a href="#">2. JUST 쇼핑몰 대박 쿠폰 이벤트</a><span>24.10.28</span></li>
+							<li><a href="#">3. 반품, 환불에 대한 약정 변경</a><span>24.10.28</span></li>
+							<li><a href="#">4. 4월 15일 오후 23:00 ~ 24:00 서버작업으로 홈페이지 중지</a><span>24.10.28</span></li>
+						</ul>
+					</div>
+					<div class="gallery tab" id="gallery">
+						<ul class="flex justb aline">
+							<li><a href="#"><img src="./images/gallery.jpg" alt="gallery1"></a></li>
+							<li><a href="#"><img src="./images/gallery2.jpg" alt="gallery2"></a></li>
+							<li><a href="#"><img src="./images/gallery3.jpg" alt="gallery3"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="banner">
+				<a href="#">
+					<figure><img src="./images/banner.jpg" alt="banner">
+						<figcaption>banner</figcaption>
+					</figure>
+				</a>
+			</div>
+			<div class="link">
+				<a href="#">
+					<figure><img src="./images/shortcut.jpg" alt="link">
+						<figcaption>link</figcaption>
+					</figure>
+				</a>
+			</div>
+		</div>
+		<footer class="flex justb aline">
+			<h2><a href="#"><img src="./images/f-logo.png" alt="f-logo"></a></h2>
+			<div class="copyright">
+				<p>44538 울산광역시 중구 종가로 345 JUST 쇼핑몰</p>
+				<p>Copyrightⓒ2017 All rights reserved.</p>
+			</div>
+			<div class="sns">
+				<ul class="flex justc aline">
+					<li><a href="#"><img src="./images/insta.png" alt="insta"></a></li>
+					<li><a href="#"><img src="./images/kakao.jpg" alt="kakao"></a></li>
+					<li><a href="#"><img src="./images/twitter.png" alt="twitter"></a></li>
+				</ul>
+			</div>
+		</footer>
+		<div class="popup">
+			<h4>이번달 고객감사 이벤트 진행중</h4>
+			<p>
+				이번달 고객감사 이벤트 진행중입니다. 회원님들은 저의 홈페이지 이벤트 페이지에 오셔서 해당 이벤트를 확인해 주세요.
+
+				고객을 위해 항상 최선을 다하는 JUST 쇼핑몰입니다.
+			</p>
+			<a href="#" class="close">닫기</a>
+		</div>
+	</div>
+	<script src="./script/jquery-3.7.1.js"></script>
+	<script src="./script/index.js"></script>
+</body>
+
+</html>

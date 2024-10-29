@@ -1,22 +1,10 @@
-
-
-// $('li.main-menu').mouseenter(function () {
-// 	$(this).find('ul.sunbmenu').stop().slideDown(500)
-// })
-// $('li.main-menu').mouseleave(function () {
-// 	$(this).find('ul.submenu').stop().slideUp(500)
-// })
-
-const mainmenus = document.querySelectorAll('li.main-menu')
-mainmenus.forEach(mainmenu => {
-	mainmenu.addEventListener('mouseenter', () => {
-		mainmenu.classList.add('on')
-	})
+$('li.main-menu').mouseenter(function(){
+	$('ul.submenu').slideDown()
+	$('header').addClass('on')
 })
-mainmenus.forEach(mainmenu=>{
-	mainmenu.addEventListener('mouseleave', ()=>{
-		mainmenu.classList.remove('on')
-	})
+$('li.main-menu').mouseleave(function(){
+	$('ul.submenu').slideUp()
+	$('header').removeClass('on')
 })
 
 setInterval(function(){
@@ -24,33 +12,24 @@ setInterval(function(){
 		$('.slide:first').appendTo('.slide-wrap')
 		$('.slide-wrap').css({'top':'0%'})
 	})
-}, 2000)
+}, 3000)
 
-const tabmenus = document.querySelectorAll('ul.tabmenu li')
-const tabs = document.querySelectorAll('.tab')
+const tabMenus=document.querySelectorAll('.tabmenu li')
+const tabs=document.querySelectorAll('.tab')
 
-function updateSlide(index) {
-	tabs.forEach(t => t.classList.remove('on'));
+function updateMenu(index){
+	tabMenus.forEach(tabMenu=>tabMenu.classList.remove('on'))
+	tabMenus[index].classList.add('on')
+	tabs.forEach(t=>t.classList.remove('on'))
 	tabs[index].classList.add('on');
-	tabmenus.forEach(tabmenu => tabmenu.classList.remove('on'));
-	tabmenus[index].classList.add('on')
 }
-
-tabmenus.forEach((tabmenu, index) => {
-	tabmenu.addEventListener('click', function (e) {
+tabMenus.forEach((tabMenu, index)=>{
+	tabMenu.addEventListener('click', function(e){
 		e.preventDefault()
-		updateSlide(index);
+		updateMenu(index)
 	})
 })
 
-
-// $('.tabmenu li').click(function () {
-// 	$('.tabmenu li').removeClass('on')
-// 	$(this).addClass('on')
-// 	let idx = $(this).index()
-// 	$('.tab').removeClass('on')
-// 	$('.tab').eq(idx).addClass('on')
-// })
 
 $('li.modal').click(function () {
 	$('.popup').fadeIn()

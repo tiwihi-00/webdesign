@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+:root {
+	--bg-main-color: #a0f7e1;
+	--bg-sub-color: #dfa5ff;
+	color: #333333;
+	background-color: #ffffff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	vertical-align: top;
+}
+
+.flex {
+	display: flex;
+}
+
+.justb {
+	justify-content: space-between;
+}
+
+.justc {
+	justify-content: center;
+}
+
+.alingc {
+	align-items: center;
+}
+
+.wrap {
+	width: 100%;
+	height: calc(100% - 100px);
+	flex-wrap: wrap;
+}
+
+/* header */
+header {
+	width: 200px;
+	height: 100%;
+	position: relative;
+}
+
+header nav {
+	width: 90%;
+	margin: 10px auto;
+}
+
+header nav a {
+	display: block;
+	text-align: center;
+}
+
+header nav li.main-menu>a {
+	padding: 10px;
+	color: rgb(2, 61, 107);
+	border-bottom: 1px solid rgb(2, 61, 107);
+}
+
+header nav li.main-menu:hover>a {
+	background-color: var(--bg-main-color);
+	color: #02513d;
+	font-weight: bold;
+}
+
+header nav li.main-menu ul.sub-menu {
+	width: 100%;
+	display: none;
+	z-index: 10;
+}
+
+header nav li.main-menu.on ul.sub-menu {
+	display: block;
+}
+
+header nav li.main-menu ul.sub-menu li a {
+	background-color: var(--bg-sub-color);
+	color: #410251;
+	padding: 7px;
+}
+
+header nav li.main-menu ul.sub-menu li:hover a {
+	background-color: #410251;
+	color: white;
+	font-weight: bold;
+}
+
+
+header .spot-menu {
+	position: absolute;
+	width: 80%;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 400px;
+}
+
+header .spot-menu li {
+	font-weight: bold;
+	padding: 10px;
+	color: #02513d;
+}
+
+header .spot-menu li:hover a {
+	color: #dfa5ff;
+}
+
+/* main */
+.main {
+	width: calc(100% - 200px);
+	height: 100%;
+}
+
+.slide-container {
+	width: 100%;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+}
+
+.slide-wrap {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.summary {
+	position: absolute;
+	background-color: rgba(143, 250, 220, 0.5);
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 40%;
+	padding: 30px 40px;
+}
+
+.summary h3 {
+	font-size: 25px;
+	padding-bottom: 15px;
+}
+
+.link {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: rgba(184, 143, 250, 0.5);
+	padding: 10px;
+
+}
+
+.link figure {
+	position: relative;
+}
+
+.link figcaption {
+	position: absolute;
+	bottom: 3%;
+	left: 3%;
+	width: 100%;
+	color: white;
+	font-weight: bold;
+
+}
+
+/* container */
+.container {
+	width: 100%;
+	height: 450px;
+}
+
+.banner {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+
+.banner a {
+	width: 30%;
+	height: 90%;
+}
+
+.banner a img {
+	width: 270px;
+	margin-right: 15px;
+	border-radius: 10px;
+}
+
+.banner p {
+	width: 50%;
+	line-height: 1.8;
+}
+
+.banner .arrow {
+	width: 50px;
+	height: 50px;
+}
+
+.banner .arrow img {
+	width: 100%;
+}
+
+.tab-menu {
+	width: 100%;
+	height: 250px;
+	margin: auto;
+}
+
+.tab-list li {
+	display: inline-block;
+	padding: 10px;
+	background-color: #a0f7e1;
+	color: #02513d;
+}
+
+.tab-list li a {
+	padding: 10px;
+}
+
+.tab-list li.on {
+	background-color: #02513d;
+	color: white;
+}
+
+
+.tabs {
+	background-color: #a0f7e1;
+	width: 90%;
+	height: calc(100% - 41px);
+}
+
+.notice ul {
+	width: 100%;
+	height: 100%;
+}
+
+.notice li {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	color: #02513d;
+	border-bottom: 1px solid #02513d;
+}
+
+.notice li:hover {
+	background-color: #02513d;
+	color: white;
+	font-weight: bold;
+}
+
+.tab {
+	display: none;
+	min-height: 160px;
+	height: 100%;
+}
+
+.tab.on {
+	display: block;
+}
+
+.gallery ul {
+	overflow: hidden;
+	padding: 10px;
+	gap: 10px;
+	height: 100%;
+}
+
+.gallery li {
+	width: 33%;
+	height: 100%;
+}
+
+.gallery li img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+
+
+/* footer */
+footer {
+	width: 100%;
+	height: 100px;
+}
+
+footer h2 {
+	width: 200px;
+}
+
+.copyright {
+	text-align: center;
+}
+
+.sns ul {
+	gap: 10px;
+}
+
+.sns ul li {
+	width: 30px;
+	height: 30px;
+}
+
+.sns ul li img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.popup {
+	position: absolute;
+	width: 50%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(184, 143, 250, 0.9);
+	padding: 30px 40px;
+	color: #410251;
+	line-height: 1.5;
+	border-radius: 10px;
+	display: none;
+}
+
+.popup a.close {
+	position: absolute;
+	right: 0;
+	bottom: -45px;
+	background-color: #410251;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 10px;
+}

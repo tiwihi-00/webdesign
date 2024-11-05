@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+:root {
+	--body-bg-color: #ffffff;
+	--body-font-color: #333333;
+	--bg-main-color: #9cb9f8;
+	--bg-sub-color: #c29cf8;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	vertical-align: top;
+}
+
+.flex {
+	display: flex;
+}
+
+.justb {
+	justify-content: space-between;
+}
+
+.justc {
+	justify-content: center;
+}
+
+.alinec {
+	align-items: center;
+}
+
+.wrap {
+	max-width: 1200px;
+	margin: auto;
+}
+
+/* header */
+header {
+	width: 100%;
+	height: 100px;
+	position: relative;
+}
+
+header::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 100px;
+	height: 0px;
+	background-color: rgba(123, 195, 254, 0.7);
+}
+
+header.on::before {
+	height: 160px;
+}
+
+header h1 {
+	width: 200px;
+	height: 40px;
+}
+
+header h1 img {
+	width: 100%;
+}
+
+header nav {
+	width: 60%;
+	align-self: flex-end;
+}
+
+header nav a {
+	display: block;
+}
+
+header nav li.main-menu {
+	flex: 1;
+	position: relative;
+}
+
+header nav li.main-menu>a {
+	text-align: center;
+	color: #011d59;
+	font-weight: bold;
+	border-bottom: 1px solid #011d59;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+header nav li.main-menu:hover>a {
+	background-color: var(--bg-main-color);
+	color: white;
+}
+
+header nav li.main-menu ul.sub-menu {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 46px;
+	background-color: var(--bg-sub-color);
+	color: #50007b;
+	height: 154px;
+	display: none;
+	z-index: 10;
+}
+
+header nav li.main-menu ul.sub-menu a {
+	padding: 7px;
+	text-align: center;
+}
+
+header nav li.main-menu.on ul.sub-menu {
+	display: block;
+}
+
+header nav li.main-menu ul.sub-menu li:hover a {
+	background-color: white;
+	color: #50007b;
+	font-weight: bold;
+}
+
+/* slide-container */
+.slide-container {
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+
+}
+
+.slide-wrap {
+	display: flex;
+	position: relative;
+
+}
+
+.slide {
+	position: relative;
+}
+
+.summary {
+	position: absolute;
+	width: 100%;
+	height: 150px;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(165, 214, 254, 0.5);
+	color: white;
+	padding: 30px 40px;
+}
+
+.summary h3 {
+	font-size: 30px;
+	padding-bottom: 10px;
+}
+
+/* contents */
+.contents {
+	width: 100%;
+	height: 200px;
+}
+
+.notice h4,
+.gallery h4 {
+	padding: 10px;
+	color: #50007b;
+	border-bottom: 1px solid #50007b;
+}
+
+.notice ul,
+.gallery ul {
+	background-color: var(--bg-main-color);
+	width: 100%;
+	height: calc(100% - 42px);
+	overflow: hidden;
+
+}
+
+.notice,
+.gallery,
+.link {
+	width: 33%;
+	height: 100%;
+}
+
+.notice ul li {
+	padding: 7px 10px;
+	border-bottom: 1px solid #011d59;
+	display: flex;
+	justify-content: space-between;
+}
+
+.notice ul li a {
+	width: 70%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.notice ul li:hover {
+	background-color: white;
+	color: #50007b;
+	font-weight: bold;
+}
+
+.gallery li {
+	width: 33%;
+	padding: 7px;
+}
+
+.gallery li img {
+	width: 100%;
+	padding: 7px 0;
+	height: 150px;
+	border-radius: 10px;
+}
+
+.link figure {
+	position: relative;
+}
+
+.link figure img {
+	border-radius: 10px;
+}
+
+.link figcaption {
+	position: absolute;
+	right: 2%;
+	top: 2%;
+	background-color: rgba(123, 195, 254, 0.5);
+	color: #011d59;
+	border-radius: 10px;
+	padding: 5px 25px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+/* footer */
+footer {
+	width: 100%;
+	height: 100px;
+}
+
+.copyright {
+	width: 80%;
+	text-align: center;
+	line-height: 1.8;
+}
+
+.f-menu {
+	width: 15%;
+
+}
+
+.sns ul {
+	gap: 7px;
+	padding-bottom: 10px;
+	justify-self: flex-end;
+}
+
+.sns ul li {
+	width: 30px;
+	height: 30px;
+}
+
+.sns ul li img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.family {
+	width: 100%;
+	height: 30px;
+}
+
+select {
+	width: 100%;
+	height: 100%;
+}
+
+.popupback {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(41, 41, 42, 0.5);
+	display: none;
+}
+
+.popup {
+	position: absolute;
+	width: 45%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(123, 195, 254, 0.9);
+	color: #011d59;
+	padding: 30px 40px;
+	border-radius: 10px;
+
+}
+
+.popup h4 {
+	font-size: 23px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+a.close {
+	position: absolute;
+	right: 0;
+	bottom: -45px;
+	background-color: #011d59;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 10px;
+
+}

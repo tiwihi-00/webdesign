@@ -7,17 +7,21 @@ $('li.main-menu').mouseleave(function(){
 	$('header').removeClass('on')
 })
 
+
 $('.slide').eq(0).siblings().hide()
 
-let idx=$(this).index()
+let idx=0
 setInterval(function(){
 	idx++
 	if(idx === 3){
 		idx=0
 	}
-	$('.slide').hide()
-	$('.slide').eq(idx).show()
+	$('.slide').fadeOut()
+	$('.slide').eq(idx).fadeIn()
 }, 3000)
+
+
+
 
 $('.modal').click(function(){
 	$('.popup').fadeIn()

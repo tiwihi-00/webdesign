@@ -24,48 +24,18 @@ setInterval(function(){
 }, 3000)
 
 
-// $('.tab-list li').click(function(){
-// 	$('.tab-list li').removeClass('on')
-// 	$(this).addClass('on')
-// 	let idx=$(this).index()
-// 	$('.tab').hide()
-// 	$('.tab').eq(idx).show()
-// })
-
-const tabLists = document.querySelectorAll('.tab-list li')
-const tabs = document.querySelectorAll('.tab')
-
-function upMenu(index) {
-	tabLists.forEach(tabList => tabList.classList.remove('on'))
-	tabLists[index].classList.add('on')
-
-	tabs.forEach(t => t.classList.remove('on'))
-	tabs[index].classList.add('on')
-}
-
-tabLists.forEach((tabList, index) => {
-	tabList.addEventListener('click', function (e) {
-		e.preventDefault()
-		upMenu(index)
-	})
-});
-
-// $('.modal').click(function () {
-// 	$('.popup').fadeIn()
-// })
-// $('a.close').click(function () {
-// 	$('.popup').fadeOut()
-// })
-const modal=document.querySelector('.modal')
-const popup=document.querySelector('.popup')
-const close=document.querySelector('a.close')
-
-modal.addEventListener('click', function(e){
-e.preventDefault()
-popup.style.display='block'
+$('.tab-list li').click(function(){
+	$('.tab-list li').removeClass('on')
+	$(this).addClass('on')
+	let idx=$(this).index()
+	$('.tab').hide()
+	$('.tab').eq(idx).show()
 })
 
-close.addEventListener('click', function(e){
-e.preventDefault()
-popup.style.display='none'
+
+$('.modal').click(function () {
+	$('.popup').fadeIn()
+})
+$('a.close').click(function () {
+	$('.popup').fadeOut()
 })
